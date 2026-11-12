@@ -1,0 +1,95 @@
+/* Reset e estilos de elementos HTML nativos */
+:root {
+  box-sizing: border-box;
+  /* Mantém o conteúdo longe das barras do sistema em celulares */
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  font-family: Inter, "Segoe UI", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--tx);
+  line-height: 1.4;
+}
+
+svg {
+  width: 1em;
+  height: 1em;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 3px solid #f5a524;
+  outline-offset: 2px;
+}
+
+h1 {
+  font-size: 30px;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  background: var(--sf);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--ln);
+  vertical-align: top;
+}
+
+th {
+  background: var(--side);
+}
+
+dialog {
+  border: 1px solid var(--ln);
+  border-radius: 16px;
+  padding: 22px;
+  max-width: 440px;
+  background: var(--sf);
+  color: var(--tx);
+}
+
+dialog::backdrop {
+  background: #00000066;
+}
+
+dialog h4 {
+  margin: 0 0 8px;
+  font-size: 21px;
+}
+
+dialog p {
+  margin: 0 0 14px;
+  color: var(--mu);
+}

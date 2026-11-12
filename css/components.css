@@ -1,0 +1,478 @@
+/* Componentes da visão do cidadão */
+
+/* ---------- Card do processo ---------- */
+.card {
+  background: var(--sf);
+  border: 1px solid var(--ln);
+  border-radius: 18px;
+  padding: 18px 18px 22px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.head h2 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.meta {
+  color: var(--mu);
+  font-size: 15px;
+}
+
+.folder {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--blbg);
+  color: var(--bl);
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+}
+
+.fav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--sf);
+  border: 1px solid var(--ln);
+  border-radius: 10px;
+  padding: 9px 15px;
+  font-weight: 600;
+}
+
+.fav[aria-pressed="true"] {
+  background: var(--blbg);
+  color: var(--bl);
+}
+
+.fav[aria-pressed="true"] svg {
+  fill: currentColor;
+}
+
+/* ---------- Banner de situação (cores por variante) ---------- */
+.st {
+  --c: var(--gr);
+  --b2: var(--grbg);
+  --i: var(--grico);
+
+  margin-top: 16px;
+  background: var(--b2);
+  border-radius: 14px;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.st.a {
+  --c: var(--amt);
+  --b2: #fff1d6;
+  --i: #f6d896;
+}
+
+.st.b {
+  --c: var(--bl);
+  --b2: var(--blbg);
+  --i: #c3d3ff;
+}
+
+.st.p {
+  --c: var(--pu);
+  --b2: var(--pubg);
+  --i: #ddd3fa;
+}
+
+.st .ico {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--i);
+  color: var(--c);
+  display: grid;
+  place-items: center;
+  font-size: 44px;
+  flex: none;
+}
+
+.st h3 {
+  margin: 0;
+  font-size: 32px;
+  color: var(--c);
+  letter-spacing: -0.5px;
+}
+
+.st p {
+  margin: 4px 0 0;
+  font-size: 19px;
+}
+
+.st .note {
+  font-size: 16px;
+  color: var(--mu);
+}
+
+/* ---------- Mini cards (etapa atual / preciso fazer algo) ---------- */
+.pair {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.mini {
+  background: var(--bg);
+  border: 1px solid var(--ln);
+  border-radius: 14px;
+  padding: 13px 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.mini .ico {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--blbg);
+  color: var(--bl);
+  display: grid;
+  place-items: center;
+  font-size: 26px;
+  flex: none;
+}
+
+.mini small {
+  display: block;
+  font-size: 16px;
+  color: var(--mu);
+}
+
+.mini strong {
+  font-size: 21px;
+}
+
+/* ---------- Abas ---------- */
+.tabs {
+  display: flex;
+  gap: 6px;
+  margin-top: 18px;
+  border-bottom: 1px solid var(--ln);
+  overflow-x: auto;
+}
+
+.tab {
+  background: none;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 20px;
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: -1px;
+  white-space: nowrap;
+}
+
+.tab svg {
+  font-size: 22px;
+}
+
+.tab[aria-selected="true"] {
+  color: var(--bl);
+  border-color: var(--bl);
+  font-weight: 600;
+}
+
+.n {
+  background: #d92d20;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 13px;
+  padding: 1px 7px;
+}
+
+.panel {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 26px;
+  padding-top: 18px;
+}
+
+.panel[hidden] {
+  display: none;
+}
+
+.panel--single {
+  grid-template-columns: 1fr;
+}
+
+/* ---------- Linha do tempo ---------- */
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 10px;
+}
+
+.step {
+  position: relative;
+  display: flex;
+  gap: 18px;
+  padding-bottom: 18px;
+}
+
+.step:last-child {
+  padding-bottom: 0;
+}
+
+.step:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 34px;
+  bottom: -4px;
+  width: 3px;
+  background: var(--ln);
+}
+
+.step.done:not(:last-child)::before {
+  background: #94bfab;
+}
+
+.mark {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border: 3px solid var(--bl);
+  background: var(--sf);
+  color: #fff;
+}
+
+.done .mark {
+  background: #0a7a22;
+  border-color: #0a7a22;
+}
+
+.mark svg {
+  font-size: 18px;
+  stroke-width: 3;
+}
+
+.step b {
+  font-size: 20px;
+  display: block;
+}
+
+.step span {
+  font-size: 16px;
+  color: var(--mu);
+  display: block;
+}
+
+.step small {
+  display: block;
+  font-size: 13px;
+  color: #6a6d7a;
+  margin-top: 2px;
+}
+
+/* ---------- Coluna lateral: resumo e assistente de IA ---------- */
+.aside {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.box {
+  background: var(--side);
+  border-radius: 14px;
+  padding: 14px 18px;
+}
+
+.box.ai {
+  background: var(--pubg);
+}
+
+.box h4 {
+  margin: 0 0 6px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.box h4 svg {
+  font-size: 26px;
+  color: var(--bl);
+}
+
+.box.ai h4 svg {
+  color: var(--pu);
+}
+
+.box p {
+  margin: 0;
+  font-size: 16px;
+  color: var(--mu);
+}
+
+.tag {
+  font-size: 12px;
+  background: #fff;
+  border: 1px solid #cfc6f3;
+  border-radius: 999px;
+  padding: 2px 8px;
+  color: var(--pu);
+  font-weight: 600;
+}
+
+.qs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 10px 0;
+}
+
+.qs button {
+  background: #fff;
+  border: 1px solid var(--pu);
+  border-radius: 999px;
+  padding: 5px 12px;
+  font-size: 14px;
+}
+
+.ask {
+  display: flex;
+  gap: 8px;
+}
+
+.ask input {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid #cfc6f3;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font: inherit;
+  font-size: 15px;
+}
+
+.ans {
+  margin-top: 10px;
+  font-size: 15px;
+  color: var(--tx);
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.ans[hidden] {
+  display: none;
+}
+
+/* ---------- Botões ---------- */
+.btn {
+  background: var(--bl);
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+  padding: 11px 18px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.btn.pu {
+  background: var(--pu);
+}
+
+.btn.gh {
+  background: var(--sf);
+  color: var(--bl);
+  border: 1.5px solid var(--bl);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ---------- Comunicações oficiais ---------- */
+.comm {
+  border: 1.5px solid #e9b44c;
+  background: #fffaf0;
+  border-radius: 14px;
+  padding: 18px 20px;
+  color: #1a1305;
+}
+
+.comm--info {
+  border-color: #c3d3ff;
+  background: #f4f7ff;
+}
+
+.comm h4 {
+  margin: 8px 0 6px;
+  font-size: 21px;
+}
+
+.comm p {
+  margin: 0 0 12px;
+  font-size: 17px;
+}
+
+.dl {
+  display: flex;
+  gap: 26px;
+  margin-bottom: 12px;
+}
+
+.dl small {
+  display: block;
+  color: var(--amt);
+  font-size: 14px;
+}
+
+.dl strong {
+  font-size: 24px;
+}
+
+.warn {
+  background: #fff1d6;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 15px;
+  color: var(--amt);
+  margin-bottom: 12px;
+}
+
+.off {
+  margin-top: 12px;
+  background: #fff;
+  border: 1px solid var(--ln);
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 15px;
+}
+
+.off[hidden] {
+  display: none;
+}
+
+.plain {
+  padding: 18px;
+  border: 1px dashed var(--ln);
+  border-radius: 14px;
+  color: var(--mu);
+  font-size: 17px;
+}

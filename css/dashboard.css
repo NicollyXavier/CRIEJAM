@@ -1,0 +1,84 @@
+/* Painel do tribunal e tela de governança */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  margin: 14px 0;
+}
+
+.kpi {
+  background: var(--sf);
+  border: 1px solid var(--ln);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.kpi strong {
+  font-size: 30px;
+  color: var(--bl);
+  display: block;
+}
+
+.kpi span {
+  font-size: 15px;
+  color: var(--mu);
+}
+
+.bar {
+  display: grid;
+  grid-template-columns: 1fr 50px;
+  gap: 10px;
+  align-items: center;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.bar i {
+  display: block;
+  height: 9px;
+  border-radius: 9px;
+  background: var(--bl);
+  margin-top: 4px;
+}
+
+.gc {
+  background: var(--sf);
+  border: 1px solid var(--ln);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.gc h4 {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.gc p,
+.gc li {
+  font-size: 15px;
+  color: var(--mu);
+  margin: 0;
+}
+
+.gc ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.gc .terms__item {
+  margin-bottom: 10px;
+}
+
+.scroll {
+  overflow-x: auto;
+}
+
+.warnb {
+  background: #fff1d6;
+  color: var(--amt);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 15px;
+  margin: 10px 0;
+}

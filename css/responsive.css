@@ -1,0 +1,51 @@
+/* Ajustes para telas menores (deve ser carregado por último) */
+@media (max-width: 1000px) {
+  .shell {
+    grid-template-columns: 1fr;
+  }
+
+  .side {
+    flex-direction: row;
+    overflow-x: auto;
+    border-right: 0;
+  }
+
+  .side a {
+    white-space: nowrap;
+    font-size: 15px;
+  }
+
+  .tip {
+    display: none;
+  }
+
+  main,
+  .wrap {
+    padding: 14px;
+  }
+
+  .panel,
+  .pair {
+    grid-template-columns: 1fr;
+  }
+
+  .brand,
+  .pill {
+    display: none;
+  }
+
+  .st {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .st h3 {
+    font-size: 26px;
+  }
+
+  .top,
+  .demo {
+    padding: 10px 14px;
+  }
+}

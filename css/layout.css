@@ -1,0 +1,189 @@
+/* Estrutura da página: cabeçalho, barra de demo, menu lateral, áreas e rodapé */
+
+/* ---------- Cabeçalho ---------- */
+.top {
+  background: var(--navy);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 12px 24px;
+}
+
+.cnj {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-right: 18px;
+  border-right: 1px solid #ffffff30;
+}
+
+.cnj b {
+  font-size: 32px;
+  letter-spacing: -2px;
+}
+
+.cnj small {
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.brand {
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.pill {
+  background: var(--navy2);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-weight: 500;
+}
+
+.sp {
+  flex: 1;
+}
+
+.ic {
+  background: none;
+  border: 0;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 4px 8px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--navy);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+/* ---------- Barra de demonstração ---------- */
+.demo {
+  background: #fff8e6;
+  border-bottom: 1px solid #ecd9a8;
+  padding: 10px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  align-items: center;
+  font-size: 15px;
+  color: var(--amt);
+}
+
+.demo .g {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.demo button {
+  background: #fff;
+  border: 1.5px solid #d9bd76;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-weight: 500;
+}
+
+.demo button[aria-pressed="true"] {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+}
+
+/* ---------- Menu lateral + conteúdo ---------- */
+.shell {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  min-height: 70vh;
+}
+
+.side {
+  background: var(--side);
+  padding: 16px 12px;
+  border-right: 1px solid var(--ln);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.side a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  color: var(--tx);
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.side a svg {
+  font-size: 24px;
+}
+
+.side a[aria-current] {
+  background: var(--menu);
+  color: var(--bl);
+  font-weight: 600;
+}
+
+.tip {
+  margin-top: auto;
+  background: var(--tip);
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 15px;
+  color: var(--mu);
+}
+
+.tip b {
+  display: block;
+  color: var(--bl);
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+main {
+  padding: 18px 18px 32px 32px;
+  min-width: 0;
+}
+
+.sub {
+  margin: 2px 0 16px;
+  color: var(--mu);
+  font-size: 17px;
+}
+
+/* ---------- Telas (visões) ---------- */
+.view[hidden] {
+  display: none;
+}
+
+.wrap {
+  padding: 22px 32px 36px;
+  max-width: 1100px;
+}
+
+/* ---------- Rodapé ---------- */
+footer {
+  text-align: center;
+  font-size: 13px;
+  color: var(--mu);
+  padding: 14px;
+}
+
+/* ---------- Acessibilidade: texto maior (botão A+) ---------- */
+body.big main,
+body.big .wrap {
+  zoom: 1.12;
+}

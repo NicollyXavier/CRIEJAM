@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Protótipo que explica o andamento de processos judiciais em linguagem simples.">
+  <title>Entender a Justiça · Protótipo v1</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+
+  <header class="top">
+    <div class="cnj"><b>CNJ</b><small>Conselho<br>Nacional de Justiça</small></div>
+    <div class="brand">Escritório Digital</div>
+    <div class="pill">Cidadão</div>
+    <div class="sp"></div>
+    <button class="ic" id="zoom" aria-pressed="false" aria-label="Aumentar tamanho do texto">A+</button>
+    <div class="avatar" title="Maria Silva">MS</div>
+  </header>
+
+  <div class="demo">
+    <div class="g">
+      <b>Tela:</b>
+      <button data-v="v1" aria-pressed="true">Visão do cidadão</button>
+      <button data-v="v2" aria-pressed="false">Painel do tribunal</button>
+      <button data-v="v3" aria-pressed="false">Governança e glossário</button>
+    </div>
+    <div class="g" id="stateBar"><b>Situação do processo (demo):</b></div>
+  </div>
+
+  <!-- Visão 1: cidadão -->
+  <section class="view" id="v1">
+    <div class="shell">
+      <nav class="side" aria-label="Menu principal">
+        <a href="#i"><svg aria-hidden="true"><use href="assets/icons/sprite.svg#home"/></svg>Início</a>
+        <a href="#p" aria-current="page"><svg aria-hidden="true"><use href="assets/icons/sprite.svg#folder"/></svg>Meus processos</a>
+        <a href="#c"><svg aria-hidden="true"><use href="assets/icons/sprite.svg#bell"/></svg>Comunicações</a>
+        <a href="#z"><svg aria-hidden="true"><use href="assets/icons/sprite.svg#cal"/></svg>Prazos e audiências</a>
+        <a href="#d"><svg aria-hidden="true"><use href="assets/icons/sprite.svg#help"/></svg>Dúvidas frequentes</a>
+        <div class="tip"><b>Entenda seu processo</b>Informações em linguagem simples e o que acontece em cada etapa.</div>
+      </nav>
+      <main>
+        <h1>Meu processo</h1>
+        <p class="sub">Veja de forma simples o que está acontecendo no seu processo.</p>
+        <div id="cit"></div>
+      </main>
+    </div>
+  </section>
+
+  <!-- Visão 2: painel do tribunal -->
+  <section class="view" id="v2" hidden>
+    <div class="wrap">
+      <h1>Painel do tribunal</h1>
+      <p class="sub">Onde as pessoas mais se confundem, em dados anonimizados e agregados, para o tribunal melhorar a comunicação.</p>
+      <div class="warnb">Dados fictícios, só para demonstração. Em uso real: sem identificar pessoas nem processos.</div>
+
+      <div class="grid">
+        <div class="kpi"><strong>74%</strong><span>abriram a comunicação antes do fim do prazo</span></div>
+        <div class="kpi"><strong>31%</strong><span>das dúvidas são sobre o significado de termos técnicos</span></div>
+        <div class="kpi"><strong>18%</strong><span>pediram contato com advogado ou Defensoria</span></div>
+      </div>
+
+      <div class="grid">
+        <div class="gc"><h4>Perguntas mais frequentes</h4><div id="bars"></div></div>
+        <div class="gc"><h4>Termos que mais geram dúvida e sugestão de texto</h4><ul id="terms"></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visão 3: governança e glossário -->
+  <section class="view" id="v3" hidden>
+    <div class="wrap">
+      <h1>Governança e glossário revisado</h1>
+      <p class="sub">Como a solução cumpre regras, protege dados e define quem responde por quê.</p>
+
+      <div class="grid">
+        <div class="gc"><h4>IA com supervisão humana</h4><ul>
+          <li>Resolução CNJ 615/2025: transparência, supervisão humana e classificação de risco.</li>
+          <li>O assistente avisa que é IA, cita a fonte e não prevê decisões.</li>
+          <li>Nenhuma decisão é automatizada.</li>
+        </ul></div>
+        <div class="gc"><h4>LGPD e segredo de justiça</h4><ul>
+          <li>Finalidade e minimização: só os dados do próprio processo.</li>
+          <li>Autenticação forte (gov.br) e registro de acessos.</li>
+          <li>Avisos por SMS, e-mail ou WhatsApp sem detalhes do caso.</li>
+        </ul></div>
+        <div class="gc"><h4>Segurança</h4><ul>
+          <li>Conteúdo do processo tratado como entrada não confiável (prompt injection).</li>
+          <li>Texto simples vem do glossário revisado, não de IA livre.</li>
+          <li>Termo oficial sempre à vista.</li>
+        </ul></div>
+        <div class="gc"><h4>Responsabilidades</h4><ul>
+          <li>Tribunal: controlador dos dados e revisor do glossário.</li>
+          <li>Equipe de linguagem simples: mantém e aprova os textos.</li>
+          <li>Comitê de IA do tribunal: avalia risco e impacto.</li>
+        </ul></div>
+        <div class="gc"><h4>Integração e escala</h4><ul>
+          <li>Dados via PDPJ-Br, Codex e Data Lake (a validar tecnicamente).</li>
+          <li>Movimentações padronizadas nacionalmente permitem reusar o glossário em outros tribunais.</li>
+        </ul></div>
+      </div>
+
+      <h2>Glossário: termo oficial → etapa → texto simples</h2>
+      <div class="warnb">Exemplos ilustrativos. Em produção, cada linha é escrita e aprovada por humanos antes de ir ao ar.</div>
+      <div class="scroll">
+        <table>
+          <thead>
+            <tr><th>Termo oficial</th><th>Etapa para o cidadão</th><th>Texto simples</th><th>Revisão</th></tr>
+          </thead>
+          <tbody id="gloss"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <footer>Protótipo de demonstração, com dados fictícios. Não tem valor jurídico e não substitui a comunicação oficial do tribunal.</footer>
+
+  <dialog id="dlg" aria-labelledby="dt">
+    <h4 id="dt">Antes de abrir</h4>
+    <p>Ao abrir esta comunicação, o tribunal registra que você tomou ciência e o prazo começa a contar. Se tiver dúvida, fale antes com seu advogado.</p>
+    <div class="row">
+      <button class="btn" id="ok">Abrir e dar ciência</button>
+      <button class="btn gh" id="no">Agora não</button>
+    </div>
+  </dialog>
+
+</body>
+</html>

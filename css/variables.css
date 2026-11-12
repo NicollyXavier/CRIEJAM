@@ -1,0 +1,23 @@
+/* Design tokens: cores e valores reutilizados em todo o projeto */
+:root {
+  --navy: #012147;
+  --navy2: #3b4478;
+  --bg: #f8f9fd;
+  --sf: #fcfcfe;
+  --side: #f1f4fd;
+  --tx: #05050a;
+  --mu: #3c3e4a;
+  --ln: #e6e8f1;
+  --bl: #0519b0;
+  --blbg: #e1e9ff;
+  --menu: #d1e0fd;
+  --tip: #d7e7ff;
+  --gr: #0f6e27;
+  --grbg: #ebf7ed;
+  --grico: #cce9cd;
+  --pu: #4a2bb4;
+  --pubg: #f2eefd;
+  --amt: #5a3700;
+
+  color-scheme: light;
+}
