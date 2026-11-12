@@ -17,12 +17,12 @@
 
 .head h2 {
   margin: 0;
-  font-size: 26px;
+  font-size: 22px;
 }
 
 .meta {
   color: var(--mu);
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .folder {
@@ -33,7 +33,7 @@
   color: var(--bl);
   display: grid;
   place-items: center;
-  font-size: 25px;
+  font-size: 22px;
 }
 
 .fav {
@@ -45,6 +45,7 @@
   border: 1px solid var(--ln);
   border-radius: 10px;
   padding: 9px 15px;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -91,31 +92,31 @@
 }
 
 .st .ico {
-  width: 80px;
-  height: 80px;
+  width: 68px;
+  height: 68px;
   border-radius: 50%;
   background: var(--i);
   color: var(--c);
   display: grid;
   place-items: center;
-  font-size: 44px;
+  font-size: 38px;
   flex: none;
 }
 
 .st h3 {
   margin: 0;
-  font-size: 32px;
+  font-size: 26px;
   color: var(--c);
   letter-spacing: -0.5px;
 }
 
 .st p {
   margin: 4px 0 0;
-  font-size: 19px;
+  font-size: 16px;
 }
 
 .st .note {
-  font-size: 16px;
+  font-size: 14px;
   color: var(--mu);
 }
 
@@ -138,25 +139,25 @@
 }
 
 .mini .ico {
-  width: 56px;
-  height: 56px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background: var(--blbg);
   color: var(--bl);
   display: grid;
   place-items: center;
-  font-size: 26px;
+  font-size: 23px;
   flex: none;
 }
 
 .mini small {
   display: block;
-  font-size: 16px;
+  font-size: 13px;
   color: var(--mu);
 }
 
 .mini strong {
-  font-size: 21px;
+  font-size: 18px;
 }
 
 /* ---------- Abas ---------- */
@@ -176,14 +177,14 @@
   align-items: center;
   gap: 9px;
   padding: 11px 20px;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 500;
   margin-bottom: -1px;
   white-space: nowrap;
 }
 
 .tab svg {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .tab[aria-selected="true"] {
@@ -196,7 +197,7 @@
   background: #d92d20;
   color: #fff;
   border-radius: 999px;
-  font-size: 13px;
+  font-size: 12px;
   padding: 1px 7px;
 }
 
@@ -270,19 +271,19 @@
 }
 
 .step b {
-  font-size: 20px;
+  font-size: 17px;
   display: block;
 }
 
 .step span {
-  font-size: 16px;
+  font-size: 14px;
   color: var(--mu);
   display: block;
 }
 
 .step small {
   display: block;
-  font-size: 13px;
+  font-size: 12px;
   color: #6a6d7a;
   margin-top: 2px;
 }
@@ -306,14 +307,14 @@
 
 .box h4 {
   margin: 0 0 6px;
-  font-size: 20px;
+  font-size: 17px;
   display: flex;
   align-items: center;
   gap: 9px;
 }
 
 .box h4 svg {
-  font-size: 26px;
+  font-size: 23px;
   color: var(--bl);
 }
 
@@ -323,12 +324,12 @@
 
 .box p {
   margin: 0;
-  font-size: 16px;
+  font-size: 14px;
   color: var(--mu);
 }
 
 .tag {
-  font-size: 12px;
+  font-size: 11px;
   background: #fff;
   border: 1px solid #cfc6f3;
   border-radius: 999px;
@@ -349,7 +350,7 @@
   border: 1px solid var(--pu);
   border-radius: 999px;
   padding: 5px 12px;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .ask {
@@ -364,12 +365,12 @@
   border-radius: 10px;
   padding: 10px 12px;
   font: inherit;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .ans {
   margin-top: 10px;
-  font-size: 15px;
+  font-size: 14px;
   color: var(--tx);
   background: #fff;
   border-radius: 10px;
@@ -388,7 +389,7 @@
   border-radius: 10px;
   padding: 11px 18px;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .btn.pu {
@@ -423,12 +424,12 @@
 
 .comm h4 {
   margin: 8px 0 6px;
-  font-size: 21px;
+  font-size: 18px;
 }
 
 .comm p {
   margin: 0 0 12px;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 .dl {
@@ -440,18 +441,18 @@
 .dl small {
   display: block;
   color: var(--amt);
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .dl strong {
-  font-size: 24px;
+  font-size: 21px;
 }
 
 .warn {
   background: #fff1d6;
   border-radius: 10px;
   padding: 10px 14px;
-  font-size: 15px;
+  font-size: 14px;
   color: var(--amt);
   margin-bottom: 12px;
 }
@@ -462,7 +463,7 @@
   border: 1px solid var(--ln);
   border-radius: 10px;
   padding: 12px;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .off[hidden] {
@@ -474,5 +475,5 @@
   border: 1px dashed var(--ln);
   border-radius: 14px;
   color: var(--mu);
-  font-size: 17px;
+  font-size: 15px;
 }
